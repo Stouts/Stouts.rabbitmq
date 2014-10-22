@@ -1,7 +1,9 @@
 Stouts.rabbitmq
 ===============
 
-[![Build Status](https://travis-ci.org/Stouts/Stouts.rabbitmq.png)](https://travis-ci.org/Stouts/Stouts.rabbitmq)
+[![Build Status](http://img.shields.io/travis/Stouts/Stouts.rabbitmq.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.rabbitmq)
+[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.rabbitmq-blue.svg?style=flat-square)](https://galaxy.rabbitmq.com/list#/roles/953)
+[![Tag](http://img.shields.io/github/tag/Stouts/Stouts.rabbitmq.svg?style=flat-square)]()
 
 Ansible role which manage RabbitMQ.
 
