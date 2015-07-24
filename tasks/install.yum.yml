@@ -1,0 +1,13 @@
+---
+
+- name: Install Erlang
+  yum: name=erlang
+
+- name: Import RabbitMQ key
+  rpm_key: key=https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+
+- name: Download RMQ package
+  get_url: url=https://github.com/rabbitmq/rabbitmq-server/releases/download/rabbitmq_v3_5_4/rabbitmq-server-3.5.4-1.noarch.rpm dest=/usr/src/rabbitmq-server-3.5.4-1.rpm
+
+- name: Install RabbitMQ
+  yum: name=/usr/src/rabbitmq-server-3.5.4-1.rpm

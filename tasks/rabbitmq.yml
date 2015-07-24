@@ -3,6 +3,9 @@
 - include: install.deb.yml
   when: ansible_os_family == 'Debian'
 
+- include: install.yum.yml
+  when: ansible_os_family == 'RedHat'
+
 - name: Ensure RabbitMQ is running
   service: name=rabbitmq-server state=started
 
