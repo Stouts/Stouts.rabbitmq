@@ -11,7 +11,7 @@
 
 - name: Ensure the users is removed
   rabbitmq_user: user={{item}} state=absent
-  with_items: "{{rabbitmq_user_remove}}"
+  with_items: "{{rabbitmq_users_remove}}"
 
 - name: Ensure the vhosts is present
   rabbitmq_vhost: name={{item}}
