@@ -1,20 +1,28 @@
 ---
 
-rabbitmq_enabled: yes
+rabbitmq_enabled: yes                   # Enable the role
 
 rabbitmq_plugins:                       # Ensure the plugins is installed
-  - rabbitmq_management
-
-rabbitmq_users:                         # Ensure the users added
-  - user: admin
-    password: admin
-    vhost: /
-    configure_priv: .*
-    read_priv: .*
-    write_priv: .*
-    tags: administrator
+- rabbitmq_management
 
 rabbitmq_vhosts: []                     # Ensure the vhosts are exists
 
+rabbitmq_users:                         # Ensure the users added
+- user: "admin"
+  password: "admin"
+  vhost: /
+  configure_priv: .*
+  read_priv: .*
+  write_priv: .*
+  tags: administrator
+
 rabbitmq_users_remove:                  # Ensure the users removed
   - guest
+
+rabbitmq_docker: false
+rabbitmq_docker_image: rabbitmq:3.6.6-management
+rabbitmq_docker_ports: ["5672:5672", "15672:15672"]
+rabbitmq_docker_net: bridge
+rabbitmq_docker_user: guest
+rabbitmq_docker_pass: guest
+rabbitmq_docker_vhost: "/"
