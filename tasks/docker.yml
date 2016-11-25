@@ -1,0 +1,16 @@
+---
+
+- name: Run container
+  docker:
+    name: rabbitmq
+    hostname: "rabbitmq.{{inventory_hostname}}"
+    image: "{{rabbitmq_docker_image}}"
+    ports: "{{rabbitmq_docker_ports}}"
+    net: "{{rabbitmq_docker_net}}"
+    pull: always
+    restart_policy: always
+    state: reloaded
+    env:
+      RABBITMQ_DEFAULT_USER: "{{rabbitmq_docker_user}}"
+      RABBITMQ_DEFAULT_PASS: "{{rabbitmq_docker_pass}}"
+      RABBITMQ_DEFAULT_VHOST: "{{rabbitmq_docker_vhost}}"
