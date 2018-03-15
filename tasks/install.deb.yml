@@ -7,5 +7,6 @@
   apt_repository: repo='deb http://www.rabbitmq.com/debian/ testing main' update_cache=yes
 
 - name: Ensure RabbitMQ is installed
-  apt: pkg=rabbitmq-server
+  apt:
+    pkg: "rabbitmq-server={{ rabbitmq_version }}"
 
