@@ -2,7 +2,7 @@
 
 rabbitmq_enabled: yes                   # Enable the role
 
-rabbitmq_version: *
+rabbitmq_version: "*"
 
 rabbitmq_plugins:                       # Ensure the plugins is installed
 - rabbitmq_management
