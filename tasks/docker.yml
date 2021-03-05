@@ -1,7 +1,7 @@
 ---
 
 - name: Run container
-  docker:
+  docker_container:
     name: rabbitmq
     hostname: "rabbitmq.{{inventory_hostname}}"
     image: "{{rabbitmq_docker_image}}"
