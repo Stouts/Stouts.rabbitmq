@@ -2,6 +2,8 @@
 
 rabbitmq_enabled: yes                   # Enable the role
 
+rabbitmq_version: 3.6.15-1
+
 rabbitmq_plugins:                       # Ensure the plugins is installed
 - rabbitmq_management
 
